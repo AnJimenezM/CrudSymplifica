@@ -34,6 +34,15 @@ ejemplo empleado:
   "ciudad": "Medellín",
   "posicion": "Desarrollador Backend"
 }
+
+
+
+peticion PUT http://localhost:8080/employees/3 *para actualizar un registro 
+peticion DELETE http://localhost:8080/employee/3 *para eliminar un registro
+peticion GET http://localhost:8080/beneficios *para consultar todos los beneficios existentes en la base de datos
+peticion GET  http://localhost:8080/beneficios/2 *para consultar el beneficio por medio de su ID
+peticion POST http://localhost:8080/beneficios *para crear un beneficio utilizando el formato JSON.
+
 ejemplo beneficio:
 {
   "nombre_beneficio": "Auxilio de transporte",
@@ -41,18 +50,15 @@ ejemplo beneficio:
   "empleado": {
     "id_empleado": 3
   }
-}
 
-peticion PUT http://localhost:8080/employees/3 *para actualizar un registro 
-peticion DELETE http://localhost:8080/employee/3 *para eliminar un registro
+peticion PUT http://localhost:8080/beneficios/3 *para actualizar un registro 
+peticion DELETE http://localhost:8080/beneficios/3 *para eliminar un registro
+peticion GET http://localhost:8080/empleados/ubicacion/Bogota * para consultar la ubicacion del empleado consumiendo la API
 
 se utilizarón dos modulos para realizar la configuracion y consumo de la API de OpenStreetMap para conectarse dentro del backend asi para 
 poderla llamar desde el frontend
 
 #Ejecucion del frontend
-
-
-
 
 comando para iniciar proyecto
 npm create vue@latest
@@ -65,7 +71,7 @@ editar el empleado para actualizar su registro y el boton eliminar empleado asi 
 se instalo la libreria dentro de vue para manejar estilos modernos utilizando Taildwind CSS
 npm install tailwindcss @tailwindcss/vite
 
-para correr el frontend se utiliza el comando de pnpm run dev se alojara en http://localhost:5173/
+para correr el frontend se utiliza el comando de npm run dev se alojara en http://localhost:5173/
 
 
 #Autor Andres Jimenez
