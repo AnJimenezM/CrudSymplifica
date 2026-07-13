@@ -1,11 +1,9 @@
 <script setup>
-import { ref } from 'vue'; // 1. Espaciado limpio
+import { ref } from 'vue'; 
 import listaEmpleado from '../components/empleados/listaEmpleado.vue';
 import FormularioEmpleado from '../components/empleados/formularioEmpleado.vue';
 import detalleEmpleado from '../components/empleados/detalleEmpleado.vue';
-
-// 2. Importación corregida de la API (Sin duplicar la misma función)
-import { crearEmpleado, actualizarEmpleado, eliminarEmpleado } from '../connection/api.js'; 
+import { crearEmpleado, actualizarEmpleado, eliminarEmpleado as eliminarRegistro } from '../connection/api.js'; 
 
 
 const listaRef = ref(null);
